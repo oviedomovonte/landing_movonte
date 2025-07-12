@@ -194,10 +194,58 @@ footer {
   .hero-section {
     padding-bottom: 0; /* Quita el espacio interno */
   }
-  
+
   .content-below-hero {
     margin-top: -2rem; /* Sube el contenido siguiente */
-  }
-  .content-below-hero {
     transform: translateY(-260px); /* Sube visualmente el bloque */
   }
+}
+
+/* --- AJUSTES ESPECÍFICOS PARA DESKTOP --- */
+@media (min-width: 769px) {
+  /* Cards más estrechas y centradas */
+  .card {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    padding: 2rem 3%;
+  }
+
+  /* Imagen más ancha y centrada */
+  .partner-img-container {
+    max-width: 825px;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  .partner-img-container img {
+    max-width: 100%;
+    border-radius: 15px;
+    display: inline-block;
+  }
+}
+@media (min-width: 769px) {
+  .card {
+    max-width: 830px; /* más ancho */
+    margin: 1.5rem auto;
+    padding: 2rem 3%;
+  }
+  .card p {
+    font-size: 1.3rem; /* letra más grande */
+  }
+}
+@media (min-width: 769px) {
+  .hero-section {
+    height: calc(
+      160vh - 179px
+    ); /* reduce la altura del hero por el translate */
+    padding-bottom: 1rem; /* o 0, según lo que quieras */
+  }
+  .hero-overlay {
+    transform: translateY(
+      0
+    ); /* quita el movimiento visual para evitar huecos */
+  }
+  .content-below-hero {
+    margin-top: 1rem; /* ajusta para que quede pegado */
+  }
+}
